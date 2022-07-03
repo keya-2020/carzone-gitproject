@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_REDIRECT_URL = 'dashboard'
+
 
 # Application definition
 
@@ -37,10 +39,22 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "django.contrib.humanize",
-    'ckeditor',
+    'django.contrib.humanize',
+    'django.contrib.sites',    
     'pages',  
-    'cars', 
+    'cars',
+    'accounts',
+    'contacts',
+    'ckeditor',
+    #authentification by social media or gmail account
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
+    # providers
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.google',
+
     
 ]
 
@@ -126,7 +140,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static/' 
 STATIC_ROOT = BASE_DIR/'static'
 STATICFILES_DIRS =['carzone/static',]
 
@@ -140,3 +154,18 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = BASE_DIR/'media'
 MEDIA_URL = '/media/'
+
+
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+    
+}
+
+SITE_ID = 1
+# email sending
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'keyagnion@gmail.com'
+EMAIL_HOST_PASSWORD = 'Ingodwel@v388'
+EMAIL_USE_TLS = True

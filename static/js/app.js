@@ -109,7 +109,7 @@ $(function () {
                 }
                 if($('.do-sticky').length < 1) {
                     $('.company-logo img').attr('src', '../static/img/logos/black-logo.png');
-                }
+                }yt
             }
             else {
                 $('.sticky-header').removeClass('header-shrink');
@@ -479,3 +479,7 @@ $(function () {
         }
     }).trigger("resize");
 })(jQuery);
+
+setTimeout(function(){
+    $('#message').fadeOut('slow');
+}, 4000)
