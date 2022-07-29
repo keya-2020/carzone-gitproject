@@ -97,7 +97,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'carzone_db',
         'USER': 'postgres',
-        'PASSWORD': 'Godisonly@88',
+        'PASSWORD': 
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -164,8 +164,8 @@ MESSAGE_TAGS = {
 
 SITE_ID = 1
 # email sending
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'keyagnion@gmail.com'
-EMAIL_HOST_PASSWORD = 'Ingodwel@v388'
+EMAIL_HOST = 
+EMAIL_PORT = 
+EMAIL_HOST_USER = 
+EMAIL_HOST_PASSWORD = 
 EMAIL_USE_TLS = True
